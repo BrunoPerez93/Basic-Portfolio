@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Project>
+
+@{
+    ViewData["Title"] = "Projects";
+}
+
+@if (Model is not null)
+{
+    <div class="container">
+        <h1>My Projects</h1>
+        <p>Here are all my projects.</p>
+    </div>
+
+    <partial name="_ListProjects" model="Model" />
+
+}

@@ -1,0 +1,15 @@
+﻿@model CombinedViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+
+<partial name="_Presentation" />
+<partial name="_Skills" />
+
+@if (Model?.HomeModel?.Projects is not null)
+{
+    <partial name="_Projects" model="Model.HomeModel.Projects" />
+}
